@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 export const Container = styled(motion.div)`
   display: flex;
   flex: 1 1 100%;
-  align-items: center;
   justify-content: center;
   flex-direction: ${(props) => props.direction};
   height: 100vh;

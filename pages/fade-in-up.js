@@ -21,6 +21,7 @@ export default function FadeInUp() {
         <Card
           initial={{ opacity: 0, y: 10, scale: 1 }}
           animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: "-50px" }}
         >
           The Card
         </Card>

@@ -7,16 +7,16 @@ import { Container, PinkLink } from "../components/scaffold";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-const UnorderedList = styled(motion.ul)``;
-const ListItem = styled.li`
-  font-size: 1.5em;
-`;
-
 const examples = {
   "stagger-list": "Leverages AnimateSharedLayout",
   "route-transition": "Leverages AnimateSharedLayout",
   "fade-in-up": "Leveraging AnimatePresence",
 };
+
+const UnorderedList = styled(motion.ul)``;
+const ListItem = styled.li`
+  font-size: 1.5em;
+`;
 
 const LtitleWrapper = styled.div`
   display: flex;
@@ -44,13 +44,18 @@ const IconWrapper = styled(motion.div)`
   transform-origin: center;
 `;
 
+const ListWrapper = styled.div`
+  align-self: center;
+`;
+
 const descVariants = {
   initial: {
     opacity: 0,
-    x: "-20px",
+    y: "-20px",
   },
   animate: {
     opacity: 1,
+    y: "0",
   },
 };
 
@@ -117,7 +122,7 @@ const List = () => {
 
 export default function Home() {
   return (
-    <Container direction="row">
+    <Container direction="column">
       <Head>
         <title>noletorious - framer motion</title>
         <meta
@@ -126,10 +131,12 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <span>examples: </span>
-      <UnorderedList>
-        <List />
-      </UnorderedList>
+      <ListWrapper>
+        <span>examples: </span>
+        <UnorderedList>
+          <List />
+        </UnorderedList>
+      </ListWrapper>
     </Container>
   );
 }
