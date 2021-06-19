@@ -10,7 +10,7 @@ const Button = styled.a`
 
 const pages = ["route-transition", "route-transition-2"];
 
-export default function RouteTransitionButtons(props) {
+export default function RouteTransitionButtons({ page }) {
   return (
     <>
       {pages.map((p) => {
